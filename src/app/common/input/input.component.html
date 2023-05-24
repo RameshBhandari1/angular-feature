@@ -1,0 +1,6 @@
+<div class="dvs-form-control" *ngIf="control">
+  <label class="col-form-label-sm float-start form-label fw-bold" [for]="inputId" *ngIf="label"
+         [class.required]="isRequired">{{ label }}</label>
+  <input class="form-control" [type]="type" [id]="inputId" [formControl]="control" [required]="isRequired">
+  <feature-validation-error [customErrorMessages]="customErrorMessages" [errors]="control.errors"></feature-validation-error>
+</div>

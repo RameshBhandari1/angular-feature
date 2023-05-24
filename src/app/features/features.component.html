@@ -1,0 +1,95 @@
+<div class="container-fluid nav-color">
+  <div class="container">
+    <!-- Image and text -->
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand" href="/">
+        <img src="./assets/images/img.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Angular Features
+      </a>
+      <form class="form-inline d-flex">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary mx-3" type="submit">Search</button>
+      </form>
+    </nav>
+  </div>
+</div>
+
+<div class="container text-color">
+  <div class="row text-center">
+    <div class="col-md-12">
+      <div class="container overflow-hidden">
+        <div class="row gy-5" [formGroup]="form">
+          <!--<div class="col-md-4" (click)="navigate()">
+            <div class="card border-success mt-3 mb-3">
+              <div class="card-header color-grey bg-transparent border-success">Feature 1</div>
+              <div class="card-body text-success">
+                <h5 class="card-title">Feature Details</h5>
+                <p class="card-text">Some information about features.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-success mt-3 mb-3">
+              <div class="card-header color-grey bg-transparent border-success">Feature 2</div>
+              <div class="card-body text-success">
+                <h5 class="card-title">Feature Details</h5>
+                <p class="card-text">Some information about features.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-success mt-3 mb-3">
+              <div class="card-header color-grey bg-transparent border-success">Feature 3</div>
+              <div class="card-body text-success">
+                <h5 class="card-title">Feature Details</h5>
+                <p class="card-text">Some information about features.</p>
+              </div>
+            </div>
+          </div>-->
+          <!--Using FormGroup-->
+          <p class="pb-0 mb-0">Using FormGroup</p>
+          <ng-container *ngFor="let control of controlJson">
+            <div class="col-md-4">
+              <feature-input [type]="control.type" [label]="control.label" [inputId]="control.controlName"
+                             [customErrorMessages]="control.errorMessages"
+                             [formControlName]="control.controlName"></feature-input>
+            </div>
+          </ng-container>
+          <div class="col-md-12 text-left m-0 p-0">
+          <div class="col-md-2 text-left mt-3 p-0">
+            <button class="btn btn-outline-success mx-3" (click)="submit()" type="submit">Submit</button>
+          </div>
+          </div>
+          <!--Using FormControl-->
+          <!--<p>Using FormControl</p>
+          <div class="col-md-4">
+            <feature-input type="text" label="Name" inputId="name" [customErrorMessages]="errorMessages" [formControl]="testControl"></feature-input>
+            <feature-input type="password" label="password" inputId="password" [formControl]="testControl1"></feature-input>
+            <feature-input type="email" label="email" inputId="email" [formControl]="testControl2" email></feature-input>
+          </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--For PopUp modal-->
+<!--<div class="modal" tabindex="1" role="dialog"
+  [ngStyle]="{'display':displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">GeeksForGeeks</h4>
+      </div>
+      <div class="modal-body">
+        <p>One Stop Solution for all CS problems</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger"
+                (click)="closePopup()">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>-->

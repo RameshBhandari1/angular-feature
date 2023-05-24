@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+$color-black: #0b0c10;
+$color-1: #1f2833;
+$color-grey: #c5c6c7;
+$color-text: #000000;
+$color-2: #45a29e;
+
+body{
+  //background-image: url("../src/assets/images/bg.png");
+  /* Full height */
+  height: 100vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.text-color {
+  color: $color-text !important;
+}
+.color-grey {
+  background: $color-grey !important;
+  color: $color-black !important;
+}
+.nav-color {
+  background: $color-grey !important;
+}
+label {
+  color: #000000;
+}
+.text-left {
+  text-align: left;
+}
+
